@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Gerenciador de Projetos</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+    <div class="container">
+    
+    	<div align="left" style="margin-top: 10px;">
+              <div>
+                <a href="/" class="btn btn-lg btn-primary" >Início</a>
+               <a href="projectmenu" class="btn btn-lg btn-primary" >Voltar</a>
+         	</div>
+         </div>
+    		    <hr>
+    
+         	<form action="saveprojecttofile" method = "post">
+           
+           
+              <label for="nome">Projeto</label>    
+		      <select class="form-control" id="projectselect" name="projectselect"  >
+           			 <option th:each="project : ${projects}" 
+                  	  th:value="${project.id}"
+                  	  th:text="${project.name}">Projeto</option>
+       		 </select>
+		   
+		    
+		    <hr>
+		    <button type="submit" class="btn btn-success">Arquivar</button>
+		        
+          
+</form>
+       
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>  
+</body>
+</html>

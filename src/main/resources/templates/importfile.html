@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Gerenciador de Projetos</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+    
+    <div align="left" style="margin-top: 10px;">
+              <div>
+                <a href="/" class="btn btn-lg btn-primary" >Início</a>
+         	</div>
+         </div>
+     
+        <hr>
+     <form action="importcsvfile" method = "post" enctype="multipart/form-data">
+    	
+	  	<div class="form-group" >
+   			<label for="filecsv">Arquivo CSV</label> 
+	       	<input type="file" id="file" name="file" placeholder="Arquivo CSV"/>
+	   </div>
+	  
+    <button type="submit" class="btn btn-success">Importar</button>
+</form>
+        
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>	

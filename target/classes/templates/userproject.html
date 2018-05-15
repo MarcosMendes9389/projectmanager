@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Gerenciador de Projetos</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+    <div class="container">
+    
+    	<div align="left" style="margin-top: 10px;">
+              <div>
+                <a href="/" class="btn btn-lg btn-primary" >Início</a>
+         	</div>
+         </div>
+    		    <hr>
+    
+         	<form action="saveuserproject" method = "post">
+           
+           
+              <label for="nome">Projeto</label>    
+		      <select class="form-control" id="projectselect" name="projectselect"  >
+           			 <option th:each="project : ${projects}" 
+                  	  th:value="${project.id}"
+                  	  th:text="${project.name}">Projeto</option>
+       		 </select>
+		               		    <hr>
+		               
+		      <label for="nome">Usuário</label>    	    
+		      <select class="form-control" id="userselect" name="userselect"  >
+           			 <option th:each="user : ${users}" 
+                  	  th:value="${user.id}"
+                  	  th:text="${user.name}">Usuário</option>
+       		 </select>
+		        		    <hr>
+		        
+
+		      <label for="nome">Função</label>    	    		        	    
+		      <select class="form-control" id="roleselect" name="roleselect"  >
+           			 <option th:each="role : ${roles}" 
+                  	  th:value="${role.id}"
+                  	  th:text="${role.name}">Função</option>
+       		 </select>
+		    
+		    <hr>
+		    <button type="submit" class="btn btn-success">Associar</button>
+		        
+          
+</form>
+       
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>  
+</body>
+</html>
