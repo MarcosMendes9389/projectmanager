@@ -1,13 +1,13 @@
 ############################################################
-#															#
-#  				Gerenciador de Projetos    					#    
-#															#
+#							
+#  	Gerenciador de Projetos    
+#							
 #############################################################
-#															#
-# Autor: Marcos Mendes https://github.com/marcosmendes9389	#
-# 															#
-# Abril / 2018												#
-#															#
+#								
+# Autor: Marcos Mendes https://github.com/marcosmendes9389	
+# 							
+# Abril / 2018						
+#							
 #############################################################
 
 
